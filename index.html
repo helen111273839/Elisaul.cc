@@ -11,7 +11,7 @@
         padding: 0;
         overflow: hidden;
         font-family: "Poppins", sans-serif;
-        background: #ffeef6;
+        background: linear-gradient(#ffe5ef, #ffffff);
     }
 
     .slide {
@@ -21,7 +21,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 20px;
+        padding: 30px;
         text-align: center;
         animation: fade 0.8s ease;
     }
@@ -35,15 +35,16 @@
         display: flex;
     }
 
-    h1, h2, p {
+    h1, p {
         color: #d63384;
+        margin-bottom: 15px;
     }
 
     .next-btn {
         margin-top: 25px;
         background: #d63384;
         color: white;
-        padding: 12px 22px;
+        padding: 12px 20px;
         border-radius: 12px;
         border: none;
         cursor: pointer;
@@ -57,20 +58,9 @@
     }
 
     .image {
-        width: 250px;
-        border-radius: 15px;
+        width: 180px;
         margin-bottom: 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .heart {
-        font-size: 40px;
-        animation: beat 1s infinite;
-    }
-
-    @keyframes beat {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.25); }
+        border-radius: 15px;
     }
 </style>
 </head>
@@ -79,67 +69,83 @@
 
 <!-- SLIDE 1 -->
 <div class="slide active">
-    <img src="https://i.imgur.com/JmP4t5C.png" class="image">
-    <h1>Hola… 💗</h1>
-    <p>Quería decirte algo, algo que llevo guardándome un buen tiempo.</p>
+    <h1>Elisaúl…</h1>
+    <p>No sé si lo que voy a decir salga perfecto, pero necesito sacarlo porque es lo que siento ahora mismo.</p>
     <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<!-- SLIDE 2 (TRISTE) -->
+<!-- SLIDE 2 -->
 <div class="slide">
-    <img src="https://i.imgur.com/El9v5C1.jpeg" class="image">
-    <h1>Últimamente me siento triste…</h1>
-    <p>
-        A veces siento que ya no somos como antes,  
-        y sé que yo también he fallado y he hecho cosas mal.  
-        Pero aun así… me importas.
-    </p>
+    <p>Estos días he estado con demasiadas cosas encima: mi cabeza, mis recuerdos, mis emociones, mi cuerpo mismo reaccionando de formas que no esperaba.</p>
+    <p>A veces todo se me junta y no sé cómo explicarlo… y cuando no sé cómo explicarlo, me cierro, me alejo, me quedo callada.</p>
     <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<!-- SLIDE 3 (TRISTE + GATITO LLORANDO) -->
+<!-- SLIDE 3 (gatito triste) -->
 <div class="slide">
-    <img src="https://i.imgur.com/dqYh3m7.jpeg" class="image">
-    <h1>Me dolió perder lo que teníamos…</h1>
-    <p>
-        No quiero que pienses que no me importas,  
-        porque sí me importas… más de lo que crees.
-    </p>
+    <img class="image" src="https://pbs.twimg.com/media/EKAppovWoAAAMv0.jpg">
+    <p>Y sé que desde afuera eso puede parecer que no me importa o que no quiero nada, pero no es eso.</p>
+    <p>Tú has estado presente, incluso cuando yo no sabía cómo pedir ayuda.</p>
     <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<!-- SLIDE 4 (LINDA) -->
+<!-- SLIDE 4 (gatito triste) -->
 <div class="slide">
-    <img src="https://i.imgur.com/PKfZ9gg.jpeg" class="image">
-    <h1>Pero también…</h1>
-    <p>
-        No todo es tristeza, porque lo que siento por ti  
-        sigue siendo bonito, sincero, lleno de luz.
-    </p>
+    <img class="image" src="https://ih1.redbubble.net/image.5128820784.2235/st,small,507x507-pad,600x600,f8f8f8.jpg">
+    <p>No sabes cuánto valoro lo que haces por mí, lo que has hecho sin que yo lo pida, lo que me has dado cuando me he sentido mal.</p>
+    <p>Valoro que te quedaste incluso cuando yo no sabía qué decir.</p>
     <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<!-- SLIDE 5 (LINDA + CORAZÓN) -->
+<!-- SLIDE 5 (gatito triste) -->
 <div class="slide">
-    <img src="https://i.imgur.com/dp3u5q0.jpeg" class="image">
-    <h1>Te quiero</h1>
-    <p>
-        Te quiero como antes, como cuando me hacías reír,  
-        como cuando hablábamos sin miedo y sin distancia.
-    </p>
-    <div class="heart">💗</div>
+    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ0BUVDZazdkdHcKHwnriZn9PsB_fw_X9k0w&s">
+    <p>A veces me da miedo estar mal y que eso afecte a las personas que quiero.</p>
+    <p>Me da miedo que alguien piense que soy una carga… y por ese miedo, me alejo.</p>
     <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<!-- SLIDE 6 (FINAL LINDO) -->
+<!-- SLIDE 6 (gatito triste) -->
 <div class="slide">
-    <img src="https://i.imgur.com/ZNYijAu.jpeg" class="image">
-    <h1>Eres especial para mí</h1>
-    <p>
-        Pase lo que pase, siempre voy a guardarte con cariño.  
-        Porque tú fuiste, y sigues siendo, alguien importante.
-    </p>
-    <h2>💗</h2>
+    <img class="image" src="https://assets.puzzlefactory.com/puzzle/451/032/original.jpg">
+    <p>Y esta vez lo hice de nuevo: me fui sin explicar, porque no sabía cómo poner en palabras lo que estaba sintiendo.</p>
+    <p>No porque no quiera seguir conociéndote, sino porque sigo peleando con cosas internas que me cuestan.</p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE 7 (gatito cute) -->
+<div class="slide">
+    <img class="image" src="https://ih1.redbubble.net/image.4757214939.7625/raf,360x360,075,t,fafafa:ca443f4786.jpg">
+    <p>Por ti siento cosas reales.</p>
+    <p>No son juegos ni momentos pasajeros. Me mueves, me importas.</p>
+    <p>Me nace construir algo contigo… paso a paso, sin apuro, sin presión.</p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE 8 (gatito con corazón) -->
+<div class="slide">
+    <img class="image" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F341494286689701%2Fposts%2F2041119056727207%2F&psig=AOvVaw04Y7IQ5bw1hdcPChSazlIW&ust=1763820878030000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLij2Pi2g5EDFQAAAAAdAAAAABAU">
+    <p>Estoy tratando de no repetir cosas que ya me hicieron daño.</p>
+    <p>Estoy luchando conmigo misma… pero aun así, quiero avanzar contigo.</p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE 9 (gatito con corazón) -->
+<div class="slide">
+    <img class="image" src="https://www.google.com/imgres?q=gato%20diciendo%20que%20te%20quiero%20idiota%20meme&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D1247614715581633&imgrefurl=https%3A%2F%2Fwww.facebook.com%2Fgatitos.qctd%2Fposts%2Fhola-te-quiero-mucho-toma-awa%2F1247614742248297%2F&docid=KOqq2LROChw9YM&tbnid=00KRBSjPNJVfHM&vet=12ahUKEwiVxcOxt4ORAxWcK7kGHYlsAPcQM3oECFwQAA..i&w=720&h=670&hcb=2&ved=2ahUKEwiVxcOxt4ORAxWcK7kGHYlsAPcQM3oECFwQAA">
+    <p>No te estoy pidiendo que te quedes a la fuerza.</p>
+    <p>Solo quiero que sepas que sí me importa. Que no me alejé porque no quisiera, sino porque estaba tratando de respirar.</p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE 10 (final cute) -->
+<div class="slide">
+    <img class="image" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fcalderone0794%2Fgatos-de-calendario-xdxd%2F&psig=AOvVaw0FUWpqH2g_TBEfbj4BdM9M&ust=1763821065700000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMCZ-9O3g5EDFQAAAAAdAAAAABAL">
+    <p>Solo quería que supieras la verdad:</p>
+    <p>me importas, quiero seguir conociéndote,  
+    y no quiero que mis días malos te hagan pensar que no me interesa.</p>
+    <p>Estoy intentando, a mi ritmo, sin máscaras.</p>
+    <h1>💗</h1>
 </div>
 
 <script>
