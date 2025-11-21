@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: "Georgia", serif;
+    overflow-x: hidden;
+}
+
+.contenedor {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.7;
+    color: #444;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #e60073;
+}
+
+.heart {
+    position: fixed;
+    font-size: 22px;
+    animation: fade 3s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fade {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-60px) scale(1.4); }
+}
