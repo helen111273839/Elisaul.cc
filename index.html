@@ -43,8 +43,8 @@
         margin-top: 25px;
         background: #d63384;
         color: white;
-        padding: 12px 20px;
-        border-radius: 10px;
+        padding: 12px 22px;
+        border-radius: 12px;
         border: none;
         cursor: pointer;
         font-size: 18px;
@@ -54,6 +54,13 @@
     .next-btn:hover {
         transform: scale(1.05);
         background: #e54d9b;
+    }
+
+    .image {
+        width: 250px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     .heart {
@@ -72,38 +79,66 @@
 
 <!-- SLIDE 1 -->
 <div class="slide active">
-    <h1>Hola 💗</h1>
-    <p>Quería decirte algo…</p>
-    <div class="heart">💗</div>
+    <img src="https://i.imgur.com/JmP4t5C.png" class="image">
+    <h1>Hola… 💗</h1>
+    <p>Quería decirte algo, algo que llevo guardándome un buen tiempo.</p>
     <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<!-- SLIDE 2 -->
+<!-- SLIDE 2 (TRISTE) -->
 <div class="slide">
+    <img src="https://i.imgur.com/El9v5C1.jpeg" class="image">
+    <h1>Últimamente me siento triste…</h1>
+    <p>
+        A veces siento que ya no somos como antes,  
+        y sé que yo también he fallado y he hecho cosas mal.  
+        Pero aun así… me importas.
+    </p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE 3 (TRISTE + GATITO LLORANDO) -->
+<div class="slide">
+    <img src="https://i.imgur.com/dqYh3m7.jpeg" class="image">
+    <h1>Me dolió perder lo que teníamos…</h1>
+    <p>
+        No quiero que pienses que no me importas,  
+        porque sí me importas… más de lo que crees.
+    </p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE 4 (LINDA) -->
+<div class="slide">
+    <img src="https://i.imgur.com/PKfZ9gg.jpeg" class="image">
+    <h1>Pero también…</h1>
+    <p>
+        No todo es tristeza, porque lo que siento por ti  
+        sigue siendo bonito, sincero, lleno de luz.
+    </p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE 5 (LINDA + CORAZÓN) -->
+<div class="slide">
+    <img src="https://i.imgur.com/dp3u5q0.jpeg" class="image">
     <h1>Te quiero</h1>
-    <p>Mucho más de lo que logro decir con palabras…</p>
-    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
-</div>
-
-<!-- SLIDE 3 -->
-<div class="slide">
-    <h1>Como antes…</h1>
-    <p>Como cuando hablábamos sin miedo, sin distancia, con ganas y verdad.</p>
-    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
-</div>
-
-<!-- SLIDE 4 -->
-<div class="slide">
-    <h1>Y quiero que lo veas…</h1>
-    <p>Quiero que recuerdes lo que siento por ti.</p>
+    <p>
+        Te quiero como antes, como cuando me hacías reír,  
+        como cuando hablábamos sin miedo y sin distancia.
+    </p>
     <div class="heart">💗</div>
     <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<!-- SLIDE FINAL -->
+<!-- SLIDE 6 (FINAL LINDO) -->
 <div class="slide">
+    <img src="https://i.imgur.com/ZNYijAu.jpeg" class="image">
     <h1>Eres especial para mí</h1>
-    <p>Siempre lo serás.</p>
+    <p>
+        Pase lo que pase, siempre voy a guardarte con cariño.  
+        Porque tú fuiste, y sigues siendo, alguien importante.
+    </p>
     <h2>💗</h2>
 </div>
 
