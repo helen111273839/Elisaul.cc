@@ -1,151 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Elisaul 💗</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: white;
-            font-family: "Segoe UI", sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Contenedor */
-        .container {
-            max-width: 90%;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 25px;
-            border-radius: 20px;
-            text-align: center;
-            backdrop-filter: blur(4px);
-            border: 1px solid #ffd6e6;
-            display: none;
-        }
-
-        h1 {
-            color: #ff5c8a;
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
-
-        .mensaje {
-            color: #444;
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-        /* Corazones flotando */
-        .heart {
-            position: fixed;
-            font-size: 22px;
-            animation: floatUp 4s linear infinite;
-            opacity: 0.85;
-            pointer-events: none;
-        }
-
-        @keyframes floatUp {
-            0% { transform: translateY(0) scale(1); opacity: 0.9; }
-            100% { transform: translateY(-200px) scale(1.4); opacity: 0; }
-        }
-
-        /* Pantalla de clave */
-        #acceso {
-            text-align: center;
-            margin-top: 120px;
-        }
-
-        #clave {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 10px;
-            border: 1px solid #ffa4c6;
-            outline: none;
-        }
-
-        #btn {
-            margin-top: 15px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background: #ff6fa8;
-            border: none;
-            color: white;
-            border-radius: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Elisaul</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="hearts"></div>
 
-    <!-- Acceso -->
-    <div id="acceso">
-        <h2>💗 Ingresa la clave para ver el mensaje 💗</h2>
-        <input type="password" id="clave" placeholder="Clave">
-        <br>
-        <button id="btn">Entrar</button>
-    </div>
+<div class="slider">
+  <div class="slide active"><p>Elisaul, no sé si esto salga perfecto, pero es lo que realmente siento.</p></div>
+  <div class="slide"><p>Últimamente he estado con muchas cosas encima: mi mente, mi cuerpo, mis días raros… y a veces ni yo entiendo qué me pasa.</p></div>
+  <div class="slide"><p>Me bloqueo, me cierro y no sé cómo hablar. Pero tú has estado ahí incluso cuando no sabía cómo pedir ayuda.</p></div>
+  <div class="slide"><p>No sabes cuánto valoro lo que haces por mí y cómo me haces sentir más tranquila.</p></div>
+  <div class="slide"><p>A veces me alejo, pero no es porque no quiera seguir conociéndote. Estoy intentando entenderme.</p></div>
+  <div class="slide"><p>Por ti siento cosas reales, cosas que me mueven y me hacen querer estar bien.</p></div>
+  <div class="slide"><p>Me importa seguir conociéndote y lo que estamos construyendo.</p></div>
+  <div class="slide"><p>Lamento si no pude darte la confianza estos días. Pero nada ha cambiado.</p></div>
+  <div class="slide"><p>Al contrario… solo te quiero más. ❤️</p></div>
+</div>
 
-    <!-- Corazones -->
-    <div id="hearts"></div>
+<div class="controls">
+  <button id="prev">←</button>
+  <button id="next">→</button>
+</div>
 
-    <!-- Mensaje -->
-    <div class="container" id="contenido">
-        <h1>Para Elisaul 💗</h1>
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn">Música ♫</button>
 
-        <p class="mensaje">
-            Elisaul, no sé si esto salga perfecto, pero es lo que realmente siento.  
-            Últimamente he estado con muchas cosas encima: mi mente, mi cuerpo, mis días raros…  
-            y a veces ni yo entiendo lo que me pasa. Me bloqueo, me cierro y no sé cómo hablar.  
-            Pero tú has estado ahí, incluso cuando yo no sabía cómo pedir ayuda.
-            <br><br>
-            No sabes cuánto valoro las cosas que haces por mí, lo que me das sin que yo lo pida,  
-            lo que me hace sentir un poco más tranquila cuando todo se me revuelve.  
-            Y sí, a veces me alejo, pero no es porque no quiera seguir conociéndote.  
-            Es porque estoy tratando de entenderme a mí misma, de no volver a esas versiones mías  
-            que ya viví y que todavía me asustan.
-            <br><br>
-            Por ti siento cosas reales, cosas que me mueven y que me hacen querer estar bien.  
-            No te estoy pidiendo que te quedes ni que hagas nada por obligación,  
-            pero sí quería que supieras que me importa seguir conociéndote y me importa  
-            lo que estamos construyendo.  
-            <br><br>
-            Lamento si no pude darte la confianza de poder entrar en mis pensamientos estos días;  
-            sin embargo, nada ha cambiado… al contrario, solo te quiero más.  
-            Me da penita escribir estas cosas, pero mereces esto y más.  
-            <br><br>
-            ❤️
-        </p>
-    </div>
-
-    <script>
-        /* Clave */
-        document.getElementById("btn").onclick = function() {
-            const val = document.getElementById("clave").value;
-            if (val === "3") {  // clave que tú querías
-                document.getElementById("acceso").style.display = "none";
-                document.getElementById("contenido").style.display = "block";
-            } else {
-                alert("Clave incorrecta 💗");
-            }
-        };
-
-        /* Corazones flotando */
-        function crearCorazon() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.textContent = Math.random() > 0.5 ? "❤️" : "💗";
-            heart.style.left = Math.random() * window.innerWidth + "px";
-            heart.style.top = window.innerHeight + "px";
-            document.body.appendChild(heart);
-
-            setTimeout(() => heart.remove(), 4000);
-        }
-
-        setInterval(crearCorazon, 700);
-    </script>
-
+<script src="script.js"></script>
 </body>
 </html>
