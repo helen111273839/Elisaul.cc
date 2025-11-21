@@ -3,34 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Elisaul</title>
-<link rel="stylesheet" href="style.css">
+<title>Para ti 💗</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        background: #ffeef6;
+    }
+
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        animation: fade 0.8s ease;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .active {
+        display: flex;
+    }
+
+    h1, h2, p {
+        color: #d63384;
+    }
+
+    .next-btn {
+        margin-top: 25px;
+        background: #d63384;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .next-btn:hover {
+        transform: scale(1.05);
+        background: #e54d9b;
+    }
+
+    .heart {
+        font-size: 40px;
+        animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.25); }
+    }
+</style>
 </head>
+
 <body>
-<div class="hearts"></div>
 
-<div class="slider">
-  <div class="slide active"><p>Elisaul, no sé si esto salga perfecto, pero es lo que realmente siento.</p></div>
-  <div class="slide"><p>Últimamente he estado con muchas cosas encima: mi mente, mi cuerpo, mis días raros… y a veces ni yo entiendo qué me pasa.</p></div>
-  <div class="slide"><p>Me bloqueo, me cierro y no sé cómo hablar. Pero tú has estado ahí incluso cuando no sabía cómo pedir ayuda.</p></div>
-  <div class="slide"><p>No sabes cuánto valoro lo que haces por mí y cómo me haces sentir más tranquila.</p></div>
-  <div class="slide"><p>A veces me alejo, pero no es porque no quiera seguir conociéndote. Estoy intentando entenderme.</p></div>
-  <div class="slide"><p>Por ti siento cosas reales, cosas que me mueven y me hacen querer estar bien.</p></div>
-  <div class="slide"><p>Me importa seguir conociéndote y lo que estamos construyendo.</p></div>
-  <div class="slide"><p>Lamento si no pude darte la confianza estos días. Pero nada ha cambiado.</p></div>
-  <div class="slide"><p>Al contrario… solo te quiero más. ❤️</p></div>
+<!-- SLIDE 1 -->
+<div class="slide active">
+    <h1>Hola 💗</h1>
+    <p>Quería decirte algo…</p>
+    <div class="heart">💗</div>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<div class="controls">
-  <button id="prev">←</button>
-  <button id="next">→</button>
+<!-- SLIDE 2 -->
+<div class="slide">
+    <h1>Te quiero</h1>
+    <p>Mucho más de lo que logro decir con palabras…</p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
 </div>
 
-<audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-<button id="musicBtn">Música ♫</button>
+<!-- SLIDE 3 -->
+<div class="slide">
+    <h1>Como antes…</h1>
+    <p>Como cuando hablábamos sin miedo, sin distancia, con ganas y verdad.</p>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
 
-<script src="script.js"></script>
+<!-- SLIDE 4 -->
+<div class="slide">
+    <h1>Y quiero que lo veas…</h1>
+    <p>Quiero que recuerdes lo que siento por ti.</p>
+    <div class="heart">💗</div>
+    <button class="next-btn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<!-- SLIDE FINAL -->
+<div class="slide">
+    <h1>Eres especial para mí</h1>
+    <p>Siempre lo serás.</p>
+    <h2>💗</h2>
+</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+
+function nextSlide() {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+}
+</script>
+
 </body>
 </html>
